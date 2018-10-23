@@ -1,5 +1,4 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 import {createStackNavigator} from 'react-navigation';
 import HomeScreen from './src/container/Home'
 import SecondScreen from './src/container/SecondScreen'
@@ -10,7 +9,16 @@ const RootStack = createStackNavigator(
    Second:SecondScreen
  },
  {
-  initialRouteName:'Home'
+  initialRouteName:'Home',
+  navigationOptions: {
+    headerStyle: {
+      backgroundColor: '#89D0DF',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+  }
  }
 );
 
